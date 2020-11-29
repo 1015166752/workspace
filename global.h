@@ -24,7 +24,7 @@
 #define MAX_SCORE       100           /*max score*/
 #define EXCELLENT_SCORE 90            /*excellent score*/
 #define MIN_SCORE        0            /*min score*/
-const char* c_szFileName = "log.txt"
+const char* c_szFileName = "log.txt";
 
 /*星期几*/
 enum EDays
