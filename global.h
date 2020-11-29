@@ -16,17 +16,34 @@
  * Summary:这里写文件的摘要
  * 
  * **************************************/
-#ifndef GLOGAL_H
-#define GLOGAL_H
-#include <stdio.h>            /*C头文件*/
-#include <string>             /*C++头文件*/
-#include <log4cplus/logger.h> /*外部库头文件*/
-#include "user.h"             /*本工程的头文件*/
 
-/*sccp interface with sccp user primitive message name*/
-enum ESCCP_USER_PRIMITIVE{
-    N_UNITDATA_IND, 
-    N_NOTICE_IND,   
-    N_UNITDATA_REQ, 
+#ifndef H_GLOGAL_H
+#define H_GLOGAL_H
+
+#define MAX_ACT_TASK_NUMBER 1000  /*actives tatistic task number*/
+#define MAX_SCORE       100           /*max score*/
+#define EXCELLENT_SCORE 90            /*excellent score*/
+#define MIN_SCORE        0            /*min score*/
+const char* c_szFileName = "log.txt"
+
+/*星期几*/
+enum EDays
+{
+    EDAYS_MONDAY，/*星期一*/
+    EDAYS_TUESDAY /*星期二*/
 };
-#endif //GLOGAL_H
+
+/*点坐标*/
+struct SPoint
+{
+    int nX;//点的X位置
+    int nY;//点的Y位置
+};
+
+/*点坐标*/
+union UPoint
+{
+    unsigned int uiValue;
+    char cCount[4];
+};
+#endif //H_GLOGAL_H

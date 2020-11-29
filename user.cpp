@@ -22,13 +22,15 @@
 #include <log4cplus/logger.h> /*外部库头文件*/
 #include "user.h"             /*本工程的头文件*/
 
-/*g_flag错误编码,取值范围0~3*/
+/*g_nError错误编码,取值范围0~3*/
 /*全局错误如下:*/
 /*0－成功*/
 /*1－文件名错误*/
 /*2－路径错误*/
 /*3－其他错误*/
-int g_flag = 0;
+int g_nError = 0;
+
+static s_nFlag = 0;
 
 /***************************************
  * 描述；计算儿童全天的学习分钟数
@@ -73,4 +75,19 @@ void define()
     HANDLE  hHandle;
     DWORD  dwWord;
     LPCSTR strString;
+    float *pfStat;
+    float *ppfStat;
+    float *pppfStat;
+    
+    return;
+}
+
+int add_user()
+{
+    return 0;
+}
+
+int delete_user()
+{
+    return 0;
 }
